@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Directives</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <style>
+        .selected {
+            background-color: silver;
+        }
+    </style>
+</head>
+
+<body ng-controller="LabController as vm">
+    <div class="container">
+        <h1>Directives</h1>
+        <persons data="vm.persons" action="vm.show(person)"></persons>
+        <!--
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Nationality</th>
+                    <th scope="col">Dates</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr person data="vm.persons" action="vm.show(person)"></tr>
+            </tbody>
+        </table>
+     -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/personsDirective.js"></script>
+    <script src="./app/LabController.js"></script>
+</body>
+
+</html>

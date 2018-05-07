@@ -1,0 +1,18 @@
+{
+  "name": "modlab4-node-npm-express",
+  "version": "1.0.0",
+  "description": "setting up a basic server with Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Obi-Bram",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "modlab5-routing-config",
+  "version": "1.0.0",
+  "description": "testing with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Obi-Bram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,81 @@
+<html ng-app="app">
+
+<head>
+
+    <title>Angular Bootstrap and Animation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <!-- See https://docs.angularjs.org/api/ngAnimate for a list of the 'animation aware' features of Angular and what classes are applied in those situations-->
+    <!--
+    <style>
+        .ng-enter {
+            -webkit-transition: 1s linear opacity;
+            transition: 1s linear opacity;
+            opacity: 0;
+            margin-right: 100%;
+            font-size: 0px;
+        }
+
+        .ng-enter-active {
+            opacity: 1;
+            margin-right: 0;
+            font-size: 100%;
+        }
+
+        .ng-leave {
+            -webkit-transition: 1s linear opacity;
+            transition: 1s linear opacity;
+            opacity: 1;
+            max-height: 999px;
+        }
+
+        .ng-leave-active {
+            opacity: 0;
+            max-height: 0;
+        }
+    </style>
+    -->
+    <style>
+        th{
+            padding-bottom: 10px;
+        }
+        .btn-sm{
+            height: 3em;
+        }
+    </style>
+</head>
+
+<body ng-controller="LabController as vm">
+    <div class="container">
+        <h1>Angular Bootstrap and Animation</h1>
+        <div class="form-group">
+            <button type="button" uib-tooltip="Click this button to do something amazing." class="btn btn-primary">Hover to show Tooltip</button>
+        </div>
+        <div class="form-group">
+            <button uib-popover="Popover content goes here" popover-title="Popover Title" type="button" class="btn btn-default">Click to show Popover</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-warning" ng-click="vm.addWarning()">Add Warning</button>
+            <button type="button" class="btn btn-danger" ng-click="vm.addDanger()">Add Danger</button>
+        </div>
+        <uib-alert class="alert-animation" ng-repeat="alert in vm.alerts" type="{{alert.type}}" close="vm.dismissAlert($index)">{{alert.text}}</uib-alert>
+        <!-- <uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" NOTICE THIS==> dismiss-on-timeout="1000" close="vm.dismissAlert($index)">{{alert.text}}</uib-alert> -->
+        <h4>Inline</h4>
+        <div style="display:inline-block;">
+            <div uib-datepicker ng-model="vm.date" class="well well-sm" datepicker-options="vm.dateOptions"></div>
+        </div>
+        <pre class="alert alert-info">Date selected: {{vm.date | date:'fullDate'}}</pre>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+    <!-- this file includes templates -->
+    <script src="./app/app.js"></script>
+    <script src="./app/LabController.js"></script>
+
+</body>
+
+</html>
